@@ -1,0 +1,22 @@
+//----------------
+//  HEADER NAV
+//----------------
+
+nav{
+    border-top:5px solid $primary-colour;
+}
+
+.nav-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &__item{
+        display: inline-block;
+    }
+
+    &__link{
+        // color: $light;
+        padding: 0 $base-unit;
+    }
+}
