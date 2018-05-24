@@ -3,8 +3,9 @@
 //----------------
 
 body{
-    color: $dark;
-    font-family: 'Lato', sans-serif;
+    color: $text;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
 
 h1,h2,h3,h4,h5{
@@ -12,9 +13,18 @@ h1,h2,h3,h4,h5{
 }
 
 a{
-    color: $primary-colour;
+    color: $link;
+    text-decoration: none;
 
     &:hover{
-        text-decoration: none;
+        text-decoration: underline;
     }
+
+    &:active{
+        color: $confirm;
+    }
+}
+
+.strong{
+    font-weight: 400;
 }

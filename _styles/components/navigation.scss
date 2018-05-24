@@ -3,10 +3,12 @@
 //----------------
 
 nav{
-    border-top:5px solid $primary-colour;
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: right;
 }
 
-.nav-list{
+.inline-list{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -19,4 +21,9 @@ nav{
         // color: $light;
         padding: 0 $base-unit;
     }
+}
+
+.channels{
+    flex-basis: 0;
+    flex-grow: 1;
 }
