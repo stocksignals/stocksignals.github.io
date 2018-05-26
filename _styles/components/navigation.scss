@@ -15,11 +15,24 @@ nav{
 
     &__item{
         display: inline-block;
+
+        &:last-child .inline-list__link{
+            padding-right: 0;
+        }
+        
+        &:first-child .inline-list__link{
+            padding-left: 0;
+        }
     }
 
     &__link{
         // color: $light;
         padding: 0 $base-unit;
+    }
+
+    svg{
+        height: 14px;
+        vertical-align: middle;
     }
 }
 
