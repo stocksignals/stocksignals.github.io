@@ -1,0 +1,30 @@
+//----------------
+//  SIGNAL
+//----------------
+
+.signal{
+    border-bottom: 1px solid $border;
+    padding: $base-unit $half-unit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > *{
+        padding: 0 $half-unit;
+        align-self: flex-end;
+    }
+
+    .ticker{
+        margin: 0;
+    }
+
+    &--confirm{
+        background-color: $confirm-light;
+        border-color: $confirm; 
+    }
+
+    &--warning{
+        background-color: $warning-light;
+        border-color: $warning;
+    }
+}
