@@ -4,8 +4,11 @@
 
 nav{
     flex-basis: 0;
-    flex-grow: 1;
-    text-align: right;
+    flex-grow: 1;    
+    
+    @include screen-bigger-than($small){
+        text-align: right;
+    }
 }
 
 .inline-list{
@@ -39,4 +42,8 @@ nav{
 .channels{
     flex-basis: 0;
     flex-grow: 1;
+
+    @include screen-bigger-than($small){
+        text-align: left;
+    }
 }

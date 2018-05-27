@@ -3,12 +3,17 @@
 //----------------
 
 header{
-    display: flex;
-    align-items: center;
     border-bottom: 1px solid $border;
+    text-align: center;
+
+    @include screen-bigger-than($small){
+        display: flex;
+        align-items: center;
+    }
 }
 
 .logo{
+    padding: $base-unit 0;
     flex-grow: 0;
     flex-basis: 0;
     font-weight: 300;
