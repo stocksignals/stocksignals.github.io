@@ -18,7 +18,8 @@ $warning-light: #FAE6E6;
 
 // Spacing
 $base-unit: 12px;
-$base-unitx2: $base-unit * 2;
+$double-unit: $base-unit * 2;
+$half-unit: $base-unit / 2;
 
 $small: 767px;
 $medium: 1024px;
