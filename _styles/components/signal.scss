@@ -11,15 +11,11 @@
 
     & > *{
         padding: $half-unit;
-        align-self: flex-end;
-    }
-
-    .ticker{
-        margin: 0;
+        align-self: center;
     }
 
     svg{
-        height: 14px;
+        height: 16px;
         vertical-align: middle;
     }
 
@@ -31,5 +27,13 @@
     &--warning{
         background-color: $warning-light;
         border-color: $warning;
+    }
+}
+
+.signals-heading{
+    display: none;
+
+    @include screen-bigger-than($small){
+        display: flex;
     }
 }
