@@ -4,18 +4,23 @@
 
 .signal{
     border-bottom: 1px solid $border;
-    padding: $base-unit $half-unit;
+    padding: $half-unit;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
     & > *{
-        padding: 0 $half-unit;
+        padding: $half-unit;
         align-self: flex-end;
     }
 
     .ticker{
         margin: 0;
+    }
+
+    svg{
+        height: 14px;
+        vertical-align: middle;
     }
 
     &--confirm{
