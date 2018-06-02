@@ -6,6 +6,6 @@
     padding-top: $double-unit;
 
     @include screen-bigger-than($small){
-        width: 80%;
+        width: $small;
     }
 }
