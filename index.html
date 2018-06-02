@@ -4,30 +4,39 @@ title: Index
 ---
 <h1>Index page</h1>
 
-<section class="signal">
-    <h3 class="ticker">AVON</h3>
-    <span class="date strong">05 Jun 2018</span>
-    <span class="type strong">START/BUY</span>
-    <span class="difference">Target: <strong class="strong">+9%</strong></span>
+<section class="signal signal--warning">
     <span class="number">#<strong class="strong">99</strong></span>
+    <span class="type strong warning">{% include/svg/cross.svg %} stop/sell</span>
+    <span class="ticker strong">AVON</span>
+    <span class="date">05 Jun 2018</span>
+    <span class="difference">Loss: <strong class="strong warning">-9%</strong></span>
     <span class="duration">Duration: <strong class="strong">99 days</strong></span>
     <span class="price">Price: <strong class="strong">210.00</strong></span>
 </section>
-<section class="signal signal--warning">
-    <h3 class="ticker">AVON</h3>
-    <span class="date strong">05 Jun 2018</span>
-    <span class="type strong warning">END/SELL</span>
-    <span class="difference">Difference: <strong class="strong warning">+9%</strong></span>
+<section class="signal">
     <span class="number">#<strong class="strong">99</strong></span>
-    <span class="duration">Duration: <strong class="strong">99 days</strong></span>
+    <span class="type strong confirm">{% include/svg/arrow-up.svg %} start/buy</span>
+    <span class="ticker strong">AVON</span>
+    <span class="date">05 Jun 2018</span>
+    <span class="difference">Target: <strong class="strong">+9%</strong></span>
+    <span class="duration">Duration: <strong class="strong">3-12 weeks</strong></span>
     <span class="price">Price: <strong class="strong">210.00</strong></span>
 </section>
 <section class="signal signal--confirm">
-    <h3 class="ticker">AVON</h3>
-    <span class="date strong">05 Jun 2018</span>
-    <span class="type strong confirm">END/SELL</span>
-    <span class="difference">Difference: <strong class="strong confirm">+9%</strong></span>
     <span class="number">#<strong class="strong">99</strong></span>
+    <span class="type strong confirm">{% include/svg/cross.svg %} stop/sell</span>
+    <span class="ticker strong">AVON</span>
+    <span class="date">05 Jun 2018</span>
+    <span class="difference">Gain: <strong class="strong confirm">+9%</strong></span>
     <span class="duration">Duration: <strong class="strong">99 days</strong></span>
+    <span class="price">Price: <strong class="strong">210.00</strong></span>
+</section>
+<section class="signal">
+    <span class="number">#<strong class="strong">99</strong></span>
+    <span class="type strong confirm">{% include/svg/arrow-up.svg %} start/buy</span>
+    <span class="ticker strong">AVON</span>
+    <span class="date">05 Jun 2018</span>
+    <span class="difference">Target: <strong class="strong">+9%</strong></span>
+    <span class="duration">Duration: <strong class="strong">3-12 months</strong></span>
     <span class="price">Price: <strong class="strong">210.00</strong></span>
 </section>
