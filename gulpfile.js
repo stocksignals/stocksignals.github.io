@@ -43,7 +43,7 @@ gulp.task('watch', () => {
 // Deploy
 gulp.task('deploy', function() {
     return gulp.src('./_site/**/*')
-      .pipe(ghPages());
+      .pipe(ghPages({branch: 'master'}));
 });
 
 gulp.task('default', ['scss', 'jekyll', 'serve' ]);
