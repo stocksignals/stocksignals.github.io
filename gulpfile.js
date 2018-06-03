@@ -44,8 +44,7 @@ gulp.task('watch', () => {
 gulp.task('deploy', function() {
     return gulp.src('./_site/**/*')
       .pipe(ghPages({
-            branch: 'master',
-            cacheDir: '_site'
+            branch: 'master'
         }));
 });
 
