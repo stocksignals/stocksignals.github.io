@@ -40,13 +40,4 @@ gulp.task('watch', () => {
   gulp.watch(scssFiles, ['scss']);
 });
 
-// Deploy
-gulp.task('deploy', function() {
-    return gulp.src('./_site/**/*')
-      .pipe(ghPages({
-            branch: 'master',
-            cacheDir: '_site'
-        }));
-});
-
 gulp.task('default', ['scss', 'jekyll', 'serve' ]);
