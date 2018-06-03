@@ -7,8 +7,8 @@ const ghPages = require('gulp-gh-pages');
 
 const siteRoot = '_site';
 
-const scssEntry = '_styles/bundle.scss';
-const scssFiles = '_styles/**/*.scss';
+const scssEntry = 'bundle.scss';
+const scssFiles = '_sass/**/*.scss';
 const scssDest = './css/';
 
 // Launch Jekyll as a child perocess
@@ -25,7 +25,7 @@ gulp.task('scss', () => {
 });
 
 // Serve
-gulp.task('serve',['watch'], () => {
+gulp.task('serve', () => {
     browserSync.init({
         files: [siteRoot + '/**'],
         port: 4000,
@@ -37,7 +37,7 @@ gulp.task('serve',['watch'], () => {
 
 // Watch
 gulp.task('watch', () => {
-  gulp.watch(scssFiles, ['scss']);
+  gulp.watch(scssFiles);
 });
 
-gulp.task('default', ['scss', 'jekyll', 'serve' ]);
+gulp.task('default', ['jekyll', 'watch', 'serve']);

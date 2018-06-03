@@ -1,0 +1,15 @@
+//----------------
+//  FOOTER
+//----------------
+
+.footer{
+
+    &__navigation{
+        background-color: $light
+    }
+
+    &__signature{
+        background-color: $dark;
+        color: $light;
+    }
+}
