@@ -14,13 +14,13 @@
 }
 
 .logo{
-    padding: $base-unit 0;
+    padding: $half-unit 0;
     flex-grow: 0;
     flex-basis: 0;
     font-weight: 300;
     font-size: 20px;
     
     a{
-        color: $text;        
+        color: $dark;        
     }
 }

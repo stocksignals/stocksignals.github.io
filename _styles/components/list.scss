@@ -9,7 +9,7 @@
 
     &__item{
         display: inline-block;
-        padding: 0 $half-unit;
+        padding: $half-unit;
 
         // &:last-child .inline-list__link{
         //     padding-right: 0;
