@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const child = require('child_process');
 const gutil = require('gulp-util');
 const browserSync = require('browser-sync').create();
+const ghPages = require('gulp-gh-pages');
 
 const siteRoot = '_site';
 
@@ -37,6 +38,12 @@ gulp.task('serve',['watch'], () => {
 // Watch
 gulp.task('watch', () => {
   gulp.watch(scssFiles, ['scss']);
+});
+
+// Deploy
+gulp.task('deploy', function() {
+    return gulp.src('./_site/**/*')
+      .pipe(ghPages());
 });
 
 gulp.task('default', ['scss', 'jekyll', 'serve' ]);
