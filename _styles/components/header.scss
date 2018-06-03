@@ -2,9 +2,10 @@
 //  HEADER
 //----------------
 
-header{
+.site-nav{
     border-bottom: 1px solid $border;
     text-align: center;
+    flex-shrink: 0;
 
     @include screen-bigger-than($small){
         display: flex;

@@ -1,1 +1,10 @@
-<footer class="padding">{{ site.title }} | Last update : {{ site.time | date_to_rfc822 }}</footer>
+<footer class="footer">
+    <div class="footer__navigation">
+        <div class="site-nav padding">
+            {% include channels.html %}{% include navigation.html %}        
+        </div>        
+    </div>
+    <div class="footer__signature padding">
+            {{ site.title }} | Last update : {{ site.time | date_to_rfc822 }}
+    </div>
+</footer>
