@@ -3,9 +3,6 @@
 //----------------
 
 .news{
-    padding-top: $double-unit;
-
-    @include screen-bigger-than($small){
-        width: $small;
-    }
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
 }
