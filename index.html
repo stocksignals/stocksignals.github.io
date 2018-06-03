@@ -20,6 +20,24 @@ title: Index
     <span class="strong">CHANGE</span>
 </section>
 
+  {% for post in site.categories.signal %}
+   <section class="signal {% if post.style %}signal--{{ post.style }}{% endif %}">
+        <span>
+            <span class="signal__number">#<strong class="strong">{{ post.number }}</strong></span>&nbsp;
+            <span class="signal__type strong {% if post.style %}{{ post.style }}{% endif %}">{% include/svg/{{ post.icon }}.svg %} {{ post.type }}</span>
+        </span>
+        <span>
+            <span class="signal__ticker strong large">{{ post.stock }}</span>&nbsp;
+            <span class="signal__price">Price <strong class="strong">{{ post.price }}</strong></span>
+        </span>
+        <span>
+            <span class="signal__date strong">{{ post.date | date_to_string }}</span>&nbsp;
+            <span class="signal__duration">Duration <strong class="strong">{{ post.duration }}</strong></span>
+        </span>
+        <span class="signal__difference">Loss <strong class="strong large {% if post.style %}{{ post.style }}{% endif %}">{{ post.change }}</strong></span>
+    </section>
+  {% endfor %}
+
 <section class="signal signal--warning">
     <span>
         <span class="signal__number">#<strong class="strong">99</strong></span>&nbsp;

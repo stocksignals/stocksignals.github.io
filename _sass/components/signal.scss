@@ -14,6 +14,10 @@
         align-self: center;
     }
 
+    &__ticker{
+        text-transform: uppercase;
+    }
+
     svg{
         height: 16px;
         vertical-align: middle;
