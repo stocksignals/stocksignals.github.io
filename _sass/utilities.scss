@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #UTILITIES
+\*------------------------------------*/
+
+.padding{
+    padding: $base-unit;
+}
+
+.confirm{
+    color: $confirm;
+    background-color: $confirm-light;
+    border-color: $confirm; 
+}
+
+.warning{
+    color: $warning;
+    background-color: $warning-light;
+    border-color: $warning;
+}
+
+.info{
+    color: $link;
+}

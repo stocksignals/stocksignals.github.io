@@ -1,0 +1,17 @@
+{% for post in site.posts %}
+<article class="signal {% if post.style %}{{ post.style }}{% endif %}">
+    <section>
+        <a class="signal__number" href="{{ post.url }}">#<strong class="strong">{{ post.date | date: "%Y-%m-%d" }}-{{ post.symbol | upcase }}</strong></a>        
+        <span class="signal__ticker">
+            <span class="strong large">{{ post.symbol | upcase }}</span>
+            <span>{{ post.exchange | upcase }}</span>
+        </span>
+        <span class="signal__date strong">{{ post.date | date_to_string }}</span>
+    </section>
+    <section>
+        <span class="signal__type strong {% if post.style %}{{ post.style }}{% endif %}">{% include/svg/{{ post.direction }}.svg %} {{ post.type }} - {{ post.direction }}</span>
+        <span class="signal__price">Price <strong class="strong">{{ post.price }}</strong></span>
+        <span class="signal__difference">Change <strong class="strong large {% if post.style %}{{ post.style }}{% endif %}">{{ post.change }}%</strong></span>      
+    </section>
+</article>
+{% endfor %}

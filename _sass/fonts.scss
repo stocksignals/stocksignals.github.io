@@ -11,7 +11,12 @@ body{
 
 h1,h2,h3,h4,h5{
     padding: 0;
+    margin: 0;
     font-weight: 400;
+}
+
+p{
+    margin: 0;
 }
 
 a{
@@ -32,16 +37,4 @@ a{
 .large{
     font-size: 18px;
     vertical-align: middle;
-}
-
-.warning{
-    color: $warning;
-}
-
-.info{
-    color: $link;
-}
-
-.confirm{
-    color: $confirm;
 }
