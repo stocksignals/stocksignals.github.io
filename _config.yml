@@ -33,9 +33,9 @@ kramdown:
   hard_wrap: false
   syntax_highlighter: rouge
 
-# sass:
-#     sass_dir: _sass
-#     style: compressed
+sass:
+    sass_dir: _sass
+    style: compressed
     
 theme-colour: '#000000'
 
