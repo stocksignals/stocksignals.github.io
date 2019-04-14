@@ -2,6 +2,10 @@
     #UTILITIES
 \*------------------------------------*/
 
+.padding{
+    padding: $base-unit;
+}
+
 .confirm{
     color: $confirm;
     background-color: $confirm-light;
