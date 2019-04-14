@@ -12,6 +12,18 @@
     & > *{
         padding: $half-unit;
         align-self: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        @include screen-bigger-than($small){
+            width: 50%;
+        }
+    }
+
+    & section > *{
+        width: 33%;
     }
 
     &__ticker{
@@ -21,16 +33,6 @@
     svg{
         height: 16px;
         vertical-align: middle;
-    }
-
-    &--confirm{
-        background-color: $confirm-light;
-        border-color: $confirm; 
-    }
-
-    &--warning{
-        background-color: $warning-light;
-        border-color: $warning;
     }
 }
 
