@@ -1,17 +1,24 @@
 {% for post in site.posts %}
 <article class="signal {% if post.style %}{{ post.style }}{% endif %}">
-    <section>
-        <a class="signal__number" href="{{ post.url }}">#<strong class="strong">{{ post.date | date: "%Y-%m-%d" }}-{{ post.symbol | upcase }}</strong></a>        
+    <section class="signal__intro">
         <span class="signal__ticker">
-            <span class="strong large">{{ post.symbol | upcase }}</span>
-            <span>{{ post.exchange | upcase }}</span>
+            <span class="large">{{ post.symbol | upcase }}</span>
+            <span class="small">{{ post.exchange | upcase }}</span>
         </span>
-        <span class="signal__date strong">{{ post.date | date_to_string }}</span>
+        <a class="signal__number small" href="{{ post.url }}">#{{ post.date | date: "%Y-%m-%d" }}-{{ post.symbol | upcase }}</a>        
     </section>
-    <section>
-        <span class="signal__type strong {% if post.style %}{{ post.style }}{% endif %}">{% include/svg/{{ post.direction }}.svg %} {{ post.type }} - {{ post.direction }}</span>
-        <span class="signal__price">Price <strong class="strong">{{ post.price }}</strong></span>
-        <span class="signal__difference">Change <strong class="strong large {% if post.style %}{{ post.style }}{% endif %}">{{ post.change }}%</strong></span>      
+    <section class="signal__details">
+        <div class="signal__entry">
+            <span class="signal__date strong">{{ post.start | upcase }}</span>
+            <span class="signal__date"> - {{ post.date | date_to_string }}</span>
+            <span class="signal__price"> - price <strong class="strong">{{ post.start-price }}</strong></span>
+        </div>
+        <div class="signal__exit{% unless post.end-date %} inactive{% endunless %}">
+            <span class="signal__date strong">{{ post.end | upcase }}</span>
+            <span class="signal__date"> - {% if post.end-date %}{{ post.end-date | date_to_string }}{% else %} ----{% endif %}</span>
+            <span class="signal__price"> - price {% if post.end-price %}<strong class="strong">{{ post.end-price }}</strong>{% else %}--{% endif %}</span>
+        </div>
+        <div class="signal__difference">Change <strong class="strong {% if post.style %}{{ post.style }}{% endif %}">{{ post.change }}%</strong></div>      
     </section>
 </article>
 {% endfor %}

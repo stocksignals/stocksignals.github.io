@@ -5,37 +5,64 @@
 .signal{
     border-bottom: 1px solid $border;
     padding: $half-unit;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    font-size: 18px;
 
-    & > *{
-        padding: $half-unit;
-        align-self: center;
+    &__intro{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 100%;
-
-        @include screen-bigger-than($small){
-            width: 50%;
-        }
-    }
-
-    & section > *{
-        width: 33%;
-    }
-
-    svg{
-        height: 16px;
         vertical-align: middle;
     }
-}
 
-.signals-heading{
-    display: none;
+    &__details{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__entry, &__exit, &__difference{
+        width: 100%;
+    }
 
     @include screen-bigger-than($small){
-        display: flex;
+        &__entry, &__exit{
+            width: 40%;
+        }
+    
+        &__difference{
+            width: 20%;
+            text-align: right;
+        }
     }
+    
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+
+    // & > *{
+    //     padding: $half-unit;
+    //     align-self: center;
+    //     width: 100%;
+
+    //     @include screen-bigger-than($small){
+    //         width: 50%;
+    //     }
+    // }
+
+    // & section > *{
+    //     width: 33%;
+    // }
+
+    // svg{
+    //     height: 16px;
+    //     vertical-align: middle;
+    // }
 }
+
+// .signals-heading{
+//     display: none;
+
+//     @include screen-bigger-than($small){
+//         display: flex;
+//     }
+// }
