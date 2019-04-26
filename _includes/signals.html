@@ -9,16 +9,16 @@
     </section>
     <section class="signal__details">
         <div class="signal__entry">
-            <span class="signal__date strong">{{ post.start | upcase }}</span>
+            <span class="signal__date"><strong>{{ post.start | upcase }}</strong> signal</span>
             <span class="signal__date"> - {{ post.date | date_to_string }}</span>
             <span class="signal__price"> - price <strong class="strong">{{ post.start-price }}</strong></span>
         </div>
         <div class="signal__exit{% unless post.end-date %} inactive{% endunless %}">
-            <span class="signal__date strong">{{ post.end | upcase }}</span>
-            <span class="signal__date"> - {% if post.end-date %}{{ post.end-date | date_to_string }}{% else %} ----{% endif %}</span>
-            <span class="signal__price"> - price {% if post.end-price %}<strong class="strong">{{ post.end-price }}</strong>{% else %}--{% endif %}</span>
+            <span class="signal__date"><strong>{{ post.end | upcase }}</strong> signal</span>
+            <span class="signal__date">{% if post.end-date %} - {{ post.end-date | date_to_string }}{% endif %}</span>
+            <span class="signal__price">{% if post.end-price %} - price <strong class="strong">{{ post.end-price }}</strong>{% endif %}</span>
         </div>
-        <div class="signal__difference">Change <strong class="strong {% if post.style %}{{ post.style }}{% endif %}">{{ post.change }}%</strong></div>      
+        <div class="signal__difference">{% if post.end-price %}Change <strong class="strong">{{ post.change }}%</strong>{% else %} Open trade{% endif %}</div>      
     </section>
 </article>
 {% endfor %}
