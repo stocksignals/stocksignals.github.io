@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "bundle exec jekyll serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,18 @@
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.1",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "mixin-deep": ">=1.3.2",
+    "set-value": ">=2.0.1",
+    "lodash.template": ">=4.5.0",
+    "lodash.mergewith": ">=4.6.2",
+    "tunnel-agent": ">=0.6.0",
+    "fstream": ">=1.0.12",
+    "axios": ">=0.18.1",
+    "tar": ">=2.2.2",
+    "cryptiles": ">=4.1.2",
+    "lodash": ">=4.17.12",
+    "extend": ">=3.0.2",
+    "minimatch": ">=3.0.2"
   }
 }

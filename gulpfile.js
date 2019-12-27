@@ -1,9 +1,9 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const child = require('child_process');
-const gutil = require('gulp-util');
+// const gutil = require('gulp-util');
 const browserSync = require('browser-sync').create();
-const ghPages = require('gulp-gh-pages');
+// const ghPages = require('gulp-gh-pages');
 
 const siteRoot = '_site';
 
