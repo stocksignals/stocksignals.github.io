@@ -16,8 +16,9 @@
 title: StockSignals.org
 email: proochster@gmail.com
 description: Free online stock signals.
-baseurl: "/stocksignals" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/stocksignals" # the subpath of your site, e.g. /blog
+url: "http://stocksignals.localhost" # the base hostname & protocol for your site, e.g. http://example.com
+# port: 4000
 #twitter_username: jet2hangar
 github_username:  proochster
 
@@ -48,3 +49,4 @@ exclude:
   - package-lock.json
   - node_modules
   - gulpfile.js
+  - Readme.md
